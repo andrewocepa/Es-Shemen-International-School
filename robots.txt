@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /mail/
+Disallow: /lib/
+
+Sitemap: https://www.esis.ac.ug/sitemap.xml
