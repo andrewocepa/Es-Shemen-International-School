@@ -69,6 +69,46 @@
   <!-- Customized Bootstrap Stylesheet -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet" />
+  <style>
+    /* Keep the three administrator portraits aligned as one responsive group. */
+    .about-admin-grid {
+      align-items: stretch;
+    }
+
+    .about-admin-card {
+      display: flex;
+    }
+
+    .about-admin-card .card {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: 0.75rem;
+    }
+
+    .about-admin-card .card-img-top {
+      width: 100%;
+      height: 320px;
+      object-fit: contain;
+      object-position: center;
+      background: #f3f7f4;
+    }
+
+    .about-admin-card .card-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 155px;
+    }
+
+    @media (max-width: 767.98px) {
+      .about-admin-card .card-img-top {
+        height: 300px;
+      }
+    }
+  </style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -287,21 +327,22 @@ style="background: linear-gradient(135deg, #050c52, #324e2b);"
     <!-- Team Cards -->
 
     <section class="ftco-section ftco-counter img overlay  align-items-center justify-content-center text-center">
-      <div>
-        <h3 class="text-secondary font-weight-bold">
-          Meet Our Dedicated Administrators
-        </h3>
-        <h5 class="text-secondary justify-center text-center mb-4" >
-        Meet the dedicated professionals leading our institution with excellence and vision.
-      </h5>
-      </div>
-      <div class="row">
+      <div class="container">
+        <div>
+          <h3 class="text-secondary font-weight-bold">
+            Meet Our Dedicated Administrators
+          </h3>
+          <h5 class="text-secondary justify-center text-center mb-4" >
+          Meet the dedicated professionals leading our institution with excellence and vision.
+        </h5>
+        </div>
+        <div class="row justify-content-center g-4 about-admin-grid">
         <!-- Team Member 1 -->
-        <div class="col-lg-4 col-md-4 mb-2">
+        <div class="col-12 col-md-6 col-lg-4 about-admin-card">
           <div class="card shadow-lg border-0 ">
-            <img src="img/staff pics2/ruth.jpg" class="card-img-top rounded-top" alt="Miss Angom Ruth">
+            <img src="img/staff pics2/Mrs. Lisa Okello.jpg" class="card-img-top rounded-top" alt="Mrs. Lisa Okello">
             <div class="card-body text-center">
-              <h5 class="card-title text-dark font-weight-bold">Mrs. Angom Ruth</h5>
+              <h5 class="card-title text-dark font-weight-bold">Mrs. Lisa Okello</h5>
               <p class="card-subtitle mb-2 text-muted">Principal</p>
               <p class="text-muted small">
                  Bachelor of Education</p>
@@ -311,9 +352,9 @@ style="background: linear-gradient(135deg, #050c52, #324e2b);"
         </div>
   
         <!-- Team Member 2 -->
-        <div class="col-lg-4 col-md-6 mb-4">
+        <div class="col-12 col-md-6 col-lg-4 about-admin-card">
           <div class="card shadow-lg border-0 ">
-            <img src="img/staff pics2/add.JPG" class="card-img-top rounded-top" alt="Mrs. Pamela Renee Dokotum">
+            <img src="img/staff pics2/Mrs. Pamela Renee Dokotum.JPG" class="card-img-top rounded-top" alt="Mrs. Pamela Renee Dokotum">
             <div class="card-body text-center">
               <h5 class="card-title text-dark font-weight-bold">Mrs. Pamela Renee Dokotum</h5>
               <p class="card-subtitle mb-2 text-muted">Director / Administrator</p>
@@ -324,9 +365,9 @@ style="background: linear-gradient(135deg, #050c52, #324e2b);"
         </div>
   
         <!-- Team Member 3 -->
-        <div class="col-lg-4 col-md-6 mb-4">
+        <div class="col-12 col-md-6 col-lg-4 about-admin-card">
           <div class="card shadow-lg border-0 ">
-            <img src="img/staff pics2/team1.jpg" class="card-img-top rounded-top" alt="Mr. Andrew Ogwal">
+            <img src="img/staff pics2/team1.jpg" class="card-img-top rounded-top" alt="Prof. Okaka Opio Dokotum">
             <div class="card-body text-center">
               <h5 class="card-title text-dark font-weight-bold">
                 Prof. Okaka Opio Dokotum
@@ -338,9 +379,9 @@ style="background: linear-gradient(135deg, #050c52, #324e2b);"
             </div>
           </div>
         </div>
+        </div>
       </div>
-    </div>
-  </div>
+    </section>
 
   <!-- Footer Start -->
   <footer class="es-footer">
