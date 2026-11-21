@@ -10577,6 +10577,14 @@ h1, .h1, h2, .h2 { font-weight: 800; }
 .es-value p { color: var(--es-muted); margin: 0; }
 .es-value--wide { text-align: left; display: flex; gap: 1.1rem; align-items: center; }
 .es-value--wide .es-value__icon { margin: 0; flex-shrink: 0; }
+.es-core-values { text-align: left; }
+.es-core-values__heading { display: flex; gap: 1rem; align-items: center; }
+.es-core-values__heading .es-value__icon { margin: 0; flex-shrink: 0; }
+.es-core-values__items { margin-top: 1.5rem; }
+.es-core-value { height: 100%; padding: 1rem; background: var(--es-mint); border-radius: 14px; text-align: center; }
+.es-core-value__icon { color: var(--es-green-dark); font-size: 1.15rem; margin-bottom: .65rem; }
+.es-core-value h6 { color: var(--es-ink); margin-bottom: .4rem; }
+.es-core-value p { font-size: .9rem; }
 
 /* --- Testimonials --- */
 .es-quote {
