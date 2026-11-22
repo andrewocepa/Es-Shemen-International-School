@@ -255,6 +255,33 @@
       background-color: #f0f0f0;
       /* Placeholder background for unloaded lazy images */
     }
+
+    /* New image-led hero placed between the navigation and the original hero. */
+    .home-hero-gallery { position: relative; min-height: clamp(430px, 66vh, 700px); overflow: hidden; isolation: isolate; background: #071d35; color: #fff; }
+    .home-hero-gallery__slides, .home-hero-gallery__slide, .home-hero-gallery__slide::after { position: absolute; inset: 0; }
+    .home-hero-gallery__slides { z-index: -2; }
+    .home-hero-gallery__slide { opacity: 0; transition: opacity .9s ease; }
+    .home-hero-gallery__slide.is-active { opacity: 1; }
+    .home-hero-gallery__slide::after { content: ""; background: linear-gradient(90deg, rgba(4,18,39,.88) 0%, rgba(4,18,39,.55) 42%, rgba(4,18,39,.18) 100%); }
+    .home-hero-gallery__slide img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .home-hero-gallery__content { position: relative; z-index: 1; display: flex; align-items: center; min-height: clamp(430px, 66vh, 700px); padding: 5rem 0 6rem; }
+    .home-hero-gallery__copy { max-width: 680px; }
+    .home-hero-gallery__eyebrow { display: inline-flex; align-items: center; gap: .55rem; margin-bottom: 1.1rem; color: #bcefd2; font-size: .78rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .home-hero-gallery__eyebrow::before { content: ""; width: 2.5rem; height: 2px; background: #8bdfad; }
+    .home-hero-gallery h1 { max-width: 660px; margin: 0 0 1.25rem; color: #fff; font-size: clamp(2.35rem, 5vw, 4.75rem); font-weight: 800; line-height: 1.04; }
+    .home-hero-gallery__lead { max-width: 590px; margin-bottom: 2rem; color: rgba(255,255,255,.88); font-size: clamp(1rem, 1.7vw, 1.25rem); line-height: 1.7; }
+    .home-hero-gallery__actions { display: flex; flex-wrap: wrap; gap: .85rem; }
+    .home-hero-gallery__actions .btn-outline-light:hover, .home-hero-gallery__actions .btn-outline-light:focus { color: #123c2b; background: #fff; }
+    .home-hero-gallery__controls { position: absolute; z-index: 2; right: max(1rem, calc((100% - 1140px) / 2)); bottom: 2rem; display: flex; gap: .55rem; }
+    .home-hero-gallery__dot { width: 2.2rem; height: .3rem; padding: 0; border: 0; border-radius: 99px; background: rgba(255,255,255,.45); transition: background .25s ease, transform .25s ease; }
+    .home-hero-gallery__dot.is-active { background: #fff; transform: scaleY(1.5); }
+    @media (max-width: 575.98px) {
+      .home-hero-gallery__slide::after { background: linear-gradient(90deg, rgba(4,18,39,.82), rgba(4,18,39,.42)); }
+      .home-hero-gallery__content { padding: 4rem 0 5rem; }
+      .home-hero-gallery__controls { right: 1rem; bottom: 1.35rem; }
+      .home-hero-gallery__dot { width: 1.45rem; }
+    }
+    @media (prefers-reduced-motion: reduce) { .home-hero-gallery__slide { transition: none; } }
   </style>
 
   <script type="application/ld+json">
@@ -338,6 +365,82 @@
     </nav>
   </div>
   <!-- Navbar End -->
+
+  <!-- New Hero Gallery Start -->
+  <section class="home-hero-gallery" aria-label="Es Shemen International School highlights">
+    <div class="home-hero-gallery__slides" aria-hidden="true">
+      <div class="home-hero-gallery__slide is-active"><img src="img/Hero%20Section/HS1.jpg" alt="Es Shemen students learning" loading="eager" decoding="async"></div>
+      <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS2.jpg" alt="Es Shemen school community" loading="lazy" decoding="async"></div>
+      <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS3.png" alt="Es Shemen learners" loading="lazy" decoding="async"></div>
+      <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS4.png" alt="Students at Es Shemen" loading="lazy" decoding="async"></div>
+      <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS5.jpg" alt="Es Shemen school life" loading="lazy" decoding="async"></div>
+      <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS6.jpg" alt="Es Shemen classroom" loading="lazy" decoding="async"></div>
+      <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS7.jpeg" alt="Es Shemen students together" loading="lazy" decoding="async"></div>
+      <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS8.jpg" alt="Es Shemen learning experience" loading="lazy" decoding="async"></div>
+      <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS9.jpeg" alt="Es Shemen school activity" loading="lazy" decoding="async"></div>
+      <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS10.jpg" alt="Es Shemen learners in class" loading="lazy" decoding="async"></div>
+      <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS11.jpg" alt="Es Shemen students" loading="lazy" decoding="async"></div>
+      <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS12.jpeg" alt="Es Shemen school moment" loading="lazy" decoding="async"></div>
+      <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS13.jpg" alt="Es Shemen school community" loading="lazy" decoding="async"></div>
+      <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS14.jpeg" alt="Es Shemen learner" loading="lazy" decoding="async"></div>
+      <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS15.jpg" alt="Es Shemen classroom activity" loading="lazy" decoding="async"></div>
+      <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS16.jpg" alt="Es Shemen students learning together" loading="lazy" decoding="async"></div>
+      <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS17.jpeg" alt="Es Shemen school life" loading="lazy" decoding="async"></div>
+      <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS18.jpg" alt="Es Shemen learners in action" loading="lazy" decoding="async"></div>
+      <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS19.jpg" alt="Es Shemen students" loading="lazy" decoding="async"></div>
+      <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS20.jpeg" alt="Es Shemen school activity" loading="lazy" decoding="async"></div>
+      <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS21.jpg" alt="Es Shemen learning" loading="lazy" decoding="async"></div>
+      <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS22.jpeg" alt="Es Shemen students" loading="lazy" decoding="async"></div>
+      <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS22.jpg" alt="Es Shemen school community" loading="lazy" decoding="async"></div>
+      <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS23.jpg" alt="Es Shemen learners" loading="lazy" decoding="async"></div>
+      <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS24.jpeg" alt="Es Shemen school life" loading="lazy" decoding="async"></div>
+      <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS25.jpeg" alt="Es Shemen students learning" loading="lazy" decoding="async"></div>
+      <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS26.jpeg" alt="Es Shemen learners together" loading="lazy" decoding="async"></div>
+    </div>
+    <div class="container home-hero-gallery__content">
+      <div class="home-hero-gallery__copy">
+        <p class="home-hero-gallery__eyebrow">Diligence for Excellence</p>
+        <h1>Every learner has a story worth shaping.</h1>
+        <p class="home-hero-gallery__lead">A Christ-centred community in Lira City where children grow in wisdom, character and confidence.</p>
+        <div class="home-hero-gallery__actions">
+          <a href="contact.html" class="btn btn-success py-3 px-4">Begin your journey</a>
+          <a href="gallery.html" class="btn btn-outline-light py-3 px-4">View our community</a>
+        </div>
+      </div>
+    </div>
+    <div class="home-hero-gallery__controls" aria-label="Hero image selector"></div>
+  </section>
+  <!-- New Hero Gallery End -->
+
+  <script>
+    (function () {
+      var gallery = document.querySelector('.home-hero-gallery');
+      if (!gallery) return;
+      var slides = Array.prototype.slice.call(gallery.querySelectorAll('.home-hero-gallery__slide'));
+      var controls = gallery.querySelector('.home-hero-gallery__controls');
+      var current = 0;
+
+      slides.forEach(function (_, index) {
+        var dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'home-hero-gallery__dot' + (index === 0 ? ' is-active' : '');
+        dot.setAttribute('aria-label', 'Show hero image ' + (index + 1));
+        dot.addEventListener('click', function () { show(index); });
+        controls.appendChild(dot);
+      });
+
+      var dots = Array.prototype.slice.call(controls.children);
+      function show(index) {
+        current = (index + slides.length) % slides.length;
+        slides.forEach(function (slide, i) { slide.classList.toggle('is-active', i === current); });
+        dots.forEach(function (dot, i) { dot.classList.toggle('is-active', i === current); });
+      }
+
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        window.setInterval(function () { show(current + 1); }, 5000);
+      }
+    }());
+  </script>
 
   <div data-barba="wrapper" data-barba-wrapper>
     <div data-barba="container" data-barba-namespace="home">
