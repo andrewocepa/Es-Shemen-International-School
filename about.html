@@ -108,6 +108,21 @@
         height: 300px;
       }
     }
+
+    .about-video-hero {
+      width: 100%;
+      overflow: hidden;
+      background: #050c52;
+    }
+
+    .about-video-hero video {
+      display: block;
+      width: 100%;
+      max-height: 72vh;
+      min-height: 280px;
+      object-fit: cover;
+      object-position: center;
+    }
   </style>
     <script type="application/ld+json">
     {
@@ -191,6 +206,14 @@
     </nav>
   </div>
   <!-- Navbar End -->
+
+  <!-- Intro video placed directly below the navigation -->
+  <section class="about-video-hero" aria-label="Es Shemen International School introduction">
+    <video autoplay muted loop playsinline controls preload="metadata" poster="img/carousel/carousel1.jpg">
+      <source src="videos/EsShemen IntroVid.mp4" type="video/mp4" />
+      Your browser does not support embedded video.
+    </video>
+  </section>
 
   <div data-barba="wrapper">
     <div data-barba="container" data-barba-namespace="about">
