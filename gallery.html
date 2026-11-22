@@ -240,9 +240,12 @@
               <li class="btn btn-outline-success m-1" data-filter=".library">
                 Reading Time
               </li>
-<!--               <li class="btn btn-outline-success m-1" data-filter=".orientation">
-                Independence
-              </li> -->
+              <li class="btn btn-outline-success m-1" data-filter=".career-day">
+                Career Day
+              </li>
+              <li class="btn btn-outline-success m-1" data-filter=".independence-day">
+                Independence Day
+              </li>
               <li class="btn btn-outline-success m-1" data-filter=".graduation">
                 Graduation
               </li>
@@ -653,6 +656,31 @@
             </a>
             </div>
 
+            <!-- Event gallery images are added below before Isotope initializes. -->
++            <script>
+    (function () {
+      var eventImages = {
+        career: ["CD1.jpeg","CD2.jpeg","CD3.jpeg","CD4.jpeg","CD5.jpeg","CD6.jpeg","CD7.jpeg","CD8.jpeg","CD9.jpeg","CD10.jpeg","CD11.jpeg","CD12.jpeg","CD13.jpeg","CD14.jpeg","CD15.jpeg","CD16.jpeg","CD17.jpeg","CD18.jpeg","CD19.jpeg","CD20.jpeg","CD21.jpeg","CD22.jpeg","CD23.jpeg","CD24.jpeg","CD25.jpeg","CD26.jpeg","CD27.jpeg","CD28.jpeg","CD29.jpeg","CD30.jpeg","CD31.jpeg","CD32.jpeg","CD34.jpeg","CD35.jpeg","CD36.jpeg"],
+        independence: ["ID1.jpeg","ID2.jpeg","ID3.jpeg","ID4.jpeg","ID6.jpeg","ID7.jpeg","ID8.jpeg","ID9.jpeg","ID10.jpeg","ID11.jpeg","ID12.jpeg","ID13.jpeg","ID14.jpeg","ID15.jpeg","ID16.jpeg","ID17.jpeg","ID18.jpeg","ID19.jpeg","ID20.jpeg","ID21.jpeg","ID22.jpeg","ID23.jpeg","ID24.jpeg","ID25.jpeg","ID26.jpeg","ID27.jpeg","ID28.jpeg","ID29.jpeg","ID30.jpeg","ID31.jpeg","ID32.jpeg","ID34.jpeg","ID36.jpeg","ID37.jpeg","ID38.jpeg","ID39.jpeg","ID40.jpeg","ID41.jpeg","ID42.jpeg","ID43.jpeg","ID44.jpeg","ID45.jpeg","ID46.jpeg","ID47.jpeg","ID48.jpeg","ID49.jpeg","ID50.jpeg","ID51.jpeg","ID52.jpeg","ID54.jpeg","ID55.jpeg"]
+      };
+      var grid = document.querySelector('.grid');
+      if (!grid) return;
+      Object.keys(eventImages).forEach(function (eventName) {
+        var isCareer = eventName === 'career';
+        var folder = isCareer ? 'Career%20Day' : 'Independence%20Day';
+        var filterClass = isCareer ? 'career-day' : 'independence-day';
+        var label = isCareer ? 'Career Day' : 'Independence Day';
+        eventImages[eventName].forEach(function (fileName) {
+          var src = 'img/' + folder + '/' + fileName;
+          grid.insertAdjacentHTML('beforeend',
+            '<div class="isotope-card col-sm-4 all ' + filterClass + '">' +
+            '<a href="' + src + '" data-fancybox="' + filterClass + '">' +
+            '<img src="' + src + '" alt="' + label + ' at Es Shemen International School" class="img-fluid" loading="lazy">' +
+            '</a></div>');
+        });
+      });
+    }());
+            </script>
             <!-- Graduation -->
 <!-- 
             <div class="isotope-card col-sm-4 all orientation">

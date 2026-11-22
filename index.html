@@ -262,8 +262,8 @@
     .home-hero-gallery__slides { z-index: -2; }
     .home-hero-gallery__slide { opacity: 0; transition: opacity .9s ease; }
     .home-hero-gallery__slide.is-active { opacity: 1; }
-    .home-hero-gallery__slide::after { content: ""; background: linear-gradient(90deg, rgba(4,18,39,.88) 0%, rgba(4,18,39,.55) 42%, rgba(4,18,39,.18) 100%); }
-    .home-hero-gallery__slide img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .home-hero-gallery__slide::after { content: none; }
+    .home-hero-gallery__slide img { width: 100%; height: 100%; object-fit: cover; object-position: center; background: #071d35; }
     .home-hero-gallery__content { position: relative; z-index: 1; display: flex; align-items: center; min-height: clamp(430px, 66vh, 700px); padding: 5rem 0 6rem; }
     .home-hero-gallery__copy { max-width: 680px; }
     .home-hero-gallery__eyebrow { display: inline-flex; align-items: center; gap: .55rem; margin-bottom: 1.1rem; color: #bcefd2; font-size: .78rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
@@ -276,8 +276,8 @@
     .home-hero-gallery__dot { width: 2.2rem; height: .3rem; padding: 0; border: 0; border-radius: 99px; background: rgba(255,255,255,.45); transition: background .25s ease, transform .25s ease; }
     .home-hero-gallery__dot.is-active { background: #fff; transform: scaleY(1.5); }
     @media (max-width: 575.98px) {
-      .home-hero-gallery__slide::after { background: linear-gradient(90deg, rgba(4,18,39,.82), rgba(4,18,39,.42)); }
-      .home-hero-gallery__content { padding: 4rem 0 5rem; }
+      .home-hero-gallery { min-height: 0; aspect-ratio: 4 / 3; }
+      .home-hero-gallery__content { display: none; }
       .home-hero-gallery__controls { right: 1rem; bottom: 1.35rem; }
       .home-hero-gallery__dot { width: 1.45rem; }
     }
@@ -396,17 +396,6 @@
       <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS24.jpeg" alt="Es Shemen school life" loading="lazy" decoding="async"></div>
       <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS25.jpeg" alt="Es Shemen students learning" loading="lazy" decoding="async"></div>
       <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS26.jpeg" alt="Es Shemen learners together" loading="lazy" decoding="async"></div>
-    </div>
-    <div class="container home-hero-gallery__content">
-      <div class="home-hero-gallery__copy">
-        <p class="home-hero-gallery__eyebrow">Diligence for Excellence</p>
-        <h1>Every learner has a story worth shaping.</h1>
-        <p class="home-hero-gallery__lead">A Christ-centred community in Lira City where children grow in wisdom, character and confidence.</p>
-        <div class="home-hero-gallery__actions">
-          <a href="contact.html" class="btn btn-success py-3 px-4">Begin your journey</a>
-          <a href="gallery.html" class="btn btn-outline-light py-3 px-4">View our community</a>
-        </div>
-      </div>
     </div>
     <div class="home-hero-gallery__controls" aria-label="Hero image selector"></div>
   </section>
