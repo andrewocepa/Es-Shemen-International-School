@@ -264,8 +264,12 @@
     .home-hero-gallery__slide.is-active { opacity: 1; }
     .home-hero-gallery__slide::after { content: none; }
     .home-hero-gallery__slide img { width: 100%; height: 100%; object-fit: cover; object-position: center; background: #071d35; }
-    .home-hero-gallery__slide--collage { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .4rem; padding: .4rem; background: #071d35; }
+    .home-hero-gallery__slide--collage { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2px; padding: 2px; background: #071d35; }
     .home-hero-gallery__slide--collage img { min-width: 0; object-fit: cover; }
+    .home-hero-gallery__slide--h6 img { height: 118%; align-self: start; }
+    .home-hero-gallery__slide--h6 img:nth-child(1) { transform: translateY(15%); }
+    .home-hero-gallery__slide--h6 img:nth-child(2) { transform: translateY(0); }
+    .home-hero-gallery__slide--h6 img:nth-child(3) { transform: translateY(-3.5%); }
     .home-hero-gallery__content { position: relative; z-index: 1; display: flex; align-items: center; min-height: clamp(430px, 66vh, 700px); padding: 5rem 0 6rem; }
     .home-hero-gallery__copy { max-width: 680px; }
     .home-hero-gallery__eyebrow { display: inline-flex; align-items: center; gap: .55rem; margin-bottom: 1.1rem; color: #bcefd2; font-size: .78rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
@@ -379,15 +383,16 @@
   <section class="home-hero-gallery" aria-label="Es Shemen International School highlights">
     <div class="home-hero-gallery__slides" aria-hidden="true">
       <div class="home-hero-gallery__slide is-active"><img src="img/Hero%20Section/HS1.jpg" alt="Es Shemen students learning" loading="eager" decoding="async"></div>
-      <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS2.jpg" alt="Es Shemen school community" loading="lazy" decoding="async"></div>
-      <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS3.png" alt="Es Shemen learners" loading="lazy" decoding="async"></div>
+      <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS2A.jpg" alt="Es Shemen school community" loading="lazy" decoding="async"></div>
+      <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS2B.jpg" alt="Es Shemen school community" loading="lazy" decoding="async"></div>
       <div class="home-hero-gallery__slide home-hero-gallery__slide--collage">
-        <img src="img/Hero%20Section/HS4LEFT.jpeg" alt="Students at Es Shemen" loading="lazy" decoding="async">
-        <img src="img/Hero%20Section/HS4MIDDLE.jpeg" alt="Students at Es Shemen" loading="lazy" decoding="async">
-        <img src="img/Hero%20Section/HS4RIGHT.jpeg" alt="Students at Es Shemen" loading="lazy" decoding="async">
+        <img src="img/Hero%20Section/HS3LEFT.jpeg" alt="Students at Es Shemen" loading="lazy" decoding="async">
+        <img src="img/Hero%20Section/HS3MIDDLE.jpeg" alt="Students at Es Shemen" loading="lazy" decoding="async">
+        <img src="img/Hero%20Section/HS3RIGHT.jpeg" alt="Students at Es Shemen" loading="lazy" decoding="async">
       </div>
+      <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS4.png" alt="Es Shemen students" loading="lazy" decoding="async"></div>
       <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS5.jpg" alt="Es Shemen school life" loading="lazy" decoding="async"></div>
-      <div class="home-hero-gallery__slide home-hero-gallery__slide--collage">
+      <div class="home-hero-gallery__slide home-hero-gallery__slide--collage home-hero-gallery__slide--h6">
         <img src="img/Hero%20Section/HS6LEFT.jpeg" alt="Es Shemen classroom" loading="lazy" decoding="async">
         <img src="img/Hero%20Section/HS6MIDDLE.jpeg" alt="Es Shemen classroom" loading="lazy" decoding="async">
         <img src="img/Hero%20Section/HS6RIGHT.jpeg" alt="Es Shemen classroom" loading="lazy" decoding="async">
@@ -414,7 +419,6 @@
       <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS23.jpg" alt="Es Shemen learners" loading="lazy" decoding="async"></div>
       <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS24.jpeg" alt="Es Shemen school life" loading="lazy" decoding="async"></div>
       <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS25.jpeg" alt="Es Shemen students learning" loading="lazy" decoding="async"></div>
-      <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS26.jpeg" alt="Es Shemen learners together" loading="lazy" decoding="async"></div>
       <div class="home-hero-gallery__slide"><img src="img/Hero%20Section/HS27.jpeg" alt="Es Shemen school life" loading="lazy" decoding="async"></div>
     </div>
     <div class="home-hero-gallery__controls" aria-label="Hero image selector"></div>
@@ -478,7 +482,7 @@
             <div class="es-hero__media">
               <span class="es-hero__ring"></span>
               <div class="es-hero__blob">
-                <img src="img/carousel/carousel1.jpg" alt="Es Shemen students" loading="eager" decoding="async" />
+                <img src="img/Team/carousel1.jpg" alt="Es Shemen students" loading="eager" decoding="async" />
               </div>
               <div class="es-hero__badge es-hero__badge--tl">
                 <i class="fas fa-globe-africa"></i>
