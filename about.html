@@ -73,15 +73,121 @@
     .about-video-hero {
       width: 100%;
       overflow: hidden;
-      background: #050c52;
+      padding: clamp(2.5rem, 5vw, 5rem) 1rem;
+      background: linear-gradient(135deg, #050c52 0%, #123d35 100%);
+      text-align: center;
+    }
+
+    .about-video-intro {
+      max-width: 720px;
+      margin: 0 auto 1.75rem;
+      color: #fff;
+    }
+
+    .about-video-intro__eyebrow {
+      margin: 0 0 .65rem;
+      color: #bcefd2;
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .about-video-intro h1 {
+      margin: 0 0 .75rem;
+      color: #fff;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.08;
+    }
+
+    .about-video-intro p:last-child {
+      max-width: 580px;
+      margin: 0 auto;
+      color: rgba(255, 255, 255, .82);
+      font-size: 1.05rem;
+      line-height: 1.7;
     }
 
     .about-video-hero video {
       display: block;
-      width: 100%;
+      width: min(100%, 1200px);
       height: auto;
-      max-width: 100%;
-      object-fit: contain;
+      margin: 0 auto;
+      border: 4px solid rgba(255, 255, 255, .9);
+      border-radius: 18px;
+      background: #050c52;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, .28);
+    }
+
+    @media (max-width: 575.98px) {
+      .about-video-hero {
+        padding-inline: .75rem;
+      }
+
+      .about-video-hero video {
+        border-width: 2px;
+        border-radius: 12px;
+      }
+    }
+
+    .administrator-card {
+      height: 100%;
+      padding: 1.5rem;
+      border: 1px solid rgba(28, 107, 59, .1);
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(5, 12, 82, .08);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .administrator-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 36px rgba(5, 12, 82, .14);
+    }
+
+    .administrator-card__photo {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto 1.25rem;
+      overflow: hidden;
+      border: 5px solid #eef6f0;
+      border-radius: 50%;
+    }
+
+    .administrator-card__photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .administrator-card h4 {
+      margin-bottom: .35rem;
+    }
+
+    .administrator-card__role {
+      display: block;
+      margin-bottom: 1.25rem;
+      color: #1c6b3b;
+      font-weight: 700;
+    }
+
+    .administrator-card__details {
+      margin: 0;
+      padding-top: 1rem;
+      border-top: 1px solid #e8eee9;
+      color: #667085;
+      font-size: .92rem;
+      line-height: 1.6;
+    }
+
+    .administrator-card__details strong {
+      display: block;
+      margin-bottom: .2rem;
+      color: #243b31;
+      font-size: .75rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
     }
   </style>
     <script type="application/ld+json">
@@ -169,7 +275,12 @@
 
   <!-- Intro video placed directly below the navigation -->
   <section class="about-video-hero" aria-label="Es Shemen International School introduction">
-    <video autoplay muted loop playsinline controls preload="metadata" poster="img/carousel/carousel1.jpg">
+    <div class="about-video-intro">
+      <p class="about-video-intro__eyebrow">Discover Es Shemen</p>
+      <h1>Where learning builds character</h1>
+      <p>Take a brief look into our Christ-centred learning community in Lira City.</p>
+    </div>
+    <video muted playsinline controls preload="metadata" poster="img/carousel/carousel1.jpg">
       <source src="videos/EsShemen IntroVid.mp4" type="video/mp4" />
       Your browser does not support embedded video.
     </video>
@@ -315,30 +426,45 @@ style="background: linear-gradient(135deg, #050c52, #324e2b);"
 
         <div class="row justify-content-center">
           <div class="col-12 col-md-6 col-lg-4 text-center team mb-5">
-            <div class="position-relative overflow-hidden mb-4 rounded-circle mx-auto" style="width: 200px; height: 200px;">
-              <img class="img-fluid rounded-circle" src="img/staff pics2/Mrs. Lisa Okello.jpg" alt="Mrs. Lisa Okello" style="width: 200px; height: 200px; object-fit: cover;">
-            </div>
-            <h4>Mrs. Lisa Okello</h4>
-            <i>Principal</i>
-            <p class="text-muted small mt-2">Bachelor of Education</p>
+            <article class="administrator-card">
+              <div class="administrator-card__photo">
+                <img src="img/staff pics2/Mrs. Lisa Okello.jpg" alt="Mrs. Lisa Okello, Principal">
+              </div>
+              <h4>Mrs. Lisa Okello</h4>
+              <span class="administrator-card__role">Principal</span>
+              <p class="administrator-card__details">
+                <strong>Qualification</strong>
+                Bachelor of Education
+              </p>
+            </article>
           </div>
 
           <div class="col-12 col-md-6 col-lg-4 text-center team mb-5">
-            <div class="position-relative overflow-hidden mb-4 rounded-circle mx-auto" style="width: 200px; height: 200px;">
-              <img class="img-fluid rounded-circle" src="img/staff pics2/Mrs. Pamela Renee Dokotum.JPG" alt="Mrs. Pamela Renee Dokotum" style="width: 200px; height: 200px; object-fit: cover;">
-            </div>
-            <h4>Mrs. Pamela Renee Dokotum</h4>
-            <i>Director / Administrator</i>
-            <p class="text-muted small mt-2">Bachelor of Science in Education</p>
+            <article class="administrator-card">
+              <div class="administrator-card__photo">
+                <img src="img/staff pics2/Mrs. Pamela Renee Dokotum.JPG" alt="Mrs. Pamela Renee Dokotum, Director and Administrator">
+              </div>
+              <h4>Mrs. Pamela Renee Dokotum</h4>
+              <span class="administrator-card__role">Director &amp; Administrator</span>
+              <p class="administrator-card__details">
+                <strong>Qualification</strong>
+                Bachelor of Science in Education
+              </p>
+            </article>
           </div>
 
           <div class="col-12 col-md-6 col-lg-4 text-center team mb-5">
-            <div class="position-relative overflow-hidden mb-4 rounded-circle mx-auto" style="width: 200px; height: 200px;">
-              <img class="img-fluid rounded-circle" src="img/staff pics2/team1.jpg" alt="Prof. Okaka Opio Dokotum" style="width: 200px; height: 200px; object-fit: cover;">
-            </div>
-            <h4>Prof. Okaka Opio Dokotum</h4>
-            <i>Director / Pastor</i>
-            <p class="text-muted small mt-2">PhD in English from Northern Illinois University</p>
+            <article class="administrator-card">
+              <div class="administrator-card__photo">
+                <img src="img/staff pics2/team1.jpg" alt="Prof. Okaka Opio Dokotum, Director and Pastor">
+              </div>
+              <h4>Prof. Okaka Opio Dokotum</h4>
+              <span class="administrator-card__role">Director &amp; Pastor</span>
+              <p class="administrator-card__details">
+                <strong>Qualification</strong>
+                PhD in English from Northern Illinois University
+              </p>
+            </article>
           </div>
         </div>
       </div>
